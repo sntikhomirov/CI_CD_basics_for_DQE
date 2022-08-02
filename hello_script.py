@@ -4,6 +4,7 @@ def print_message(text):
 
 def main():
     print_message('Hello! It is master branch!')
+    print_message('First feature is added!')
 
 
 if __name__ == '__main__':
