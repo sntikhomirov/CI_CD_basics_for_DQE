@@ -19,8 +19,8 @@ pipeline {
    stage('Test') {
      steps {
         echo 'Testing...'
-        sh 'pip install -r ./requirements.txt'
-        sh" pytest ./tests/DBtests.py -r A"
+        sh'pip install -r ./requirements.txt'
+        sh"pytest ./tests/DBtests.py -r A"
      }
    }
    stage('Deploy') {
