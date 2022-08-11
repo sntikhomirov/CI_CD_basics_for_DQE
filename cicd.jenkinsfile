@@ -30,7 +30,7 @@ pipeline {
        sh 'git clone https://github.com/sntikhomirov/CI_CD_basics_for_DQE.git'
        sh 'git checkout main'
        sh 'git checkout -b "production-W$(date +%W)" main'
-       sh 'git checkout -b "production-W$(date +%W)"'
+       sh 'git checkout "production-W$(date +%W)"'
        sh 'git push origin "production-W$(date +%W)"'
      }
    }
