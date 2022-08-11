@@ -20,9 +20,7 @@ pipeline {
      steps {
         echo 'Testing...'
         sh 'pip install -r ./requirements.txt'
-        dir('tests'){
-            sh"pytest DBtests.py -r A"
-            }
+        sh" pytest ./tests/DBtests.py -r A"
      }
    }
    stage('Deploy') {
