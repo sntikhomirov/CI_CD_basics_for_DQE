@@ -19,7 +19,10 @@ pipeline {
    stage('Test') {
      steps {
         echo 'Testing...'
-        sh"python3 hello_script.py"
+        sh 'pip install -r ./requirements.txt'
+        dir('tests'){
+            sh"python3 DBtests.py"
+            }
      }
    }
    stage('Deploy') {
