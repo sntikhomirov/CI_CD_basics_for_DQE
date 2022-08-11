@@ -26,6 +26,7 @@ pipeline {
    stage('Deploy') {
      steps {
        echo 'Deploying...'
+       sh 'rm -r CI_CD_basics_for_DQE'
        sh 'git clone https://github.com/sntikhomirov/CI_CD_basics_for_DQE.git'
        sh 'git checkout -b "production-W$(date +%W)" main'
      }
