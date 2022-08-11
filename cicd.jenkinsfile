@@ -21,7 +21,7 @@ pipeline {
         echo 'Testing...'
         sh 'pip install -r ./requirements.txt'
         dir('tests'){
-            sh"python3 DBtests.py"
+            sh"pytest DBtests.py -r A"
             }
      }
    }
