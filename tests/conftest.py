@@ -5,7 +5,7 @@ import pymssql
 @pytest.fixture
 def connection():
     conn = pymssql.connect(
-        server='localhost:1433',
+        server='127.0.0.1:1433',
         user='Test',
         password='Password1234',
         database='TRN'
